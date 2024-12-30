@@ -1,9 +1,9 @@
 from api import app, db, multi_auth
-from api.models.author import AuthorModel 
+from api.models.author import AuthorModel # type: ignore
 from flask import abort, jsonify, request
 from http import HTTPStatus
 from api.schemas.author import author_schema, authors_schema
-from marshmallow import ValidationError 
+from marshmallow import ValidationError
 
 @app.route('/authors', methods=['GET'])
 def get_authors():
